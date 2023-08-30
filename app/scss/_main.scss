@@ -1,0 +1,120 @@
+.choices {
+    overflow: visible;
+    width: 50px;
+    height: 33px;
+
+    &__inner {
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+    &__item--selectable.is-highlighted {
+        background-color: $accent !important;
+        color: #fff;
+    }
+    &__item--selectable::after {
+        content: none !important;
+    }
+}
+
+.choices__list--dropdown .choices__item--selectable::after,
+.choices__list[aria-expanded] .choices .choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+    padding-right: 10px;
+    text-align: center;
+}
+
+.header {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 101px;
+    }
+
+    &__nav {
+        display: flex;
+        padding-right: 15px;
+    }
+
+    &__info {
+        display: flex;
+        gap: 45px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__tel {
+        align-self: center;
+        color: $primary;
+    }
+}
+.logo {
+    align-self: center;
+    padding-right: 68px;
+}
+.menu {
+    &__list {
+        display: flex;
+        gap: 48px;
+    }
+
+    &__list-item {
+    }
+
+    &__list-link {
+        color: $primary;
+    }
+}
+
+.first-screen {
+    position: relative;
+
+    &__body {
+        padding-top: 102px;
+        width: 479px;
+    }
+
+    &__title {
+        color: #3d3737;
+        font-size: 66px;
+        font-weight: 400;
+        font-family: "DM Serif Display", serif;
+        line-height: 60px;
+        margin: 0;
+        padding-bottom: 32px;
+    }
+
+    &__text {
+        margin: 0;
+        width: 382px;
+        padding-bottom: 54px;
+    }
+
+    &__btn {
+        border-radius: 8px;
+        border: 2px solid $accent;
+        padding: 12px 34px;
+        line-height: 24px;
+        text-transform: uppercase;
+        background-color: #fff;
+        margin-bottom: 203px;
+        cursor: pointer;
+        &:hover {
+            background-color: $accent;
+            color: #fff;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        background-image: url(../images/first-screen.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-position: center;
+        width: 50%;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+}
