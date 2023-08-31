@@ -1,7 +1,6 @@
 const {src, dest, watch, parallel, series} = require('gulp')
 
 const scss = require('gulp-sass')(require('sass'));
-const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
@@ -67,6 +66,7 @@ function sprite() {
 function scripts() {
     return src([
         'node_modules/choices.js/public/assets/scripts/choices.min.js',
+        'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -77,11 +77,9 @@ function scripts() {
 
 function styles() {
     return src('app/scss/style.scss')
-    .pipe(sourcemaps.init())
     .pipe(autoprefixer({overrideBrowserslist: ['last 10 version']}))
     .pipe(concat('style.min.css'))
     .pipe(scss({outputStyle: 'compressed'}))
-    .pipe(sourcemaps.write('.'))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
