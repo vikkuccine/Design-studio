@@ -67,6 +67,7 @@ function scripts() {
     return src([
         'node_modules/choices.js/public/assets/scripts/choices.min.js',
         'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/swiper/swiper-bundle.min.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

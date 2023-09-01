@@ -2,6 +2,12 @@ html {
 	box-sizing: border-box;
 }
 
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
 html,
 body {
 	height: 100%;
@@ -69,6 +75,7 @@ a {
 		display: flex;
 		justify-content: center;
 		padding-bottom: 84px;
+		padding-top: 70px;
 	}
 }
 
@@ -87,3 +94,6 @@ a {
 		color: #fff;
 	}
 }
+
+
+
