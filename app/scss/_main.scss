@@ -57,6 +57,10 @@
     padding-right: 68px;
 }
 
+.burger-text {
+    display: none;
+}
+
 .menu {
     &__list {
         display: flex;
@@ -82,7 +86,7 @@
             transition: .3s;
         }
 
-        &:hover::after{
+        &:hover::after {
             width: 100%;
         }
     }
@@ -108,7 +112,7 @@
 
     &__text {
         margin: 0;
-        width: 382px;
+        max-width: 382px;
         padding-bottom: 54px;
     }
 
@@ -150,11 +154,15 @@
     }
 
     &__text {
-        margin: 0;
+        margin: 0 0 33px 0;
+    }
 
-        &:first-child {
-            margin-bottom: 33px;
-        }
+    &__text-btn {
+        display: none;
+    }
+
+    &__text-paragraph {
+        margin: 0;
     }
 }
 
@@ -175,6 +183,7 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    margin: 0;
 
     &__item {
         display: flex;
@@ -184,14 +193,17 @@
     }
 
     &__photo {
-        width: 110px;
+        max-width: 110px;
         height: 90px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    &__img {}
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
 
     &__title {
         text-transform: uppercase;
@@ -222,6 +234,10 @@
         cursor: pointer;
         padding-right: 50px;
         margin-bottom: 28px;
+
+        &:last-child {
+            padding-right: 0;
+        }
 
         &:hover {
             color: $accent;
@@ -258,16 +274,16 @@
         display: block;
         overflow: hidden;
         border-radius: 10px;
+    }
 
-        img {
+    &__item-img {
 
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease 0s;
-        }
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease 0s;
 
-        &:hover img {
+        &:hover{
             transform: scale(1.1);
         }
     }
