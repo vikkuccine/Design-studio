@@ -267,6 +267,9 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px 30px;
+        max-height: 840px;
+        overflow: hidden;
+        transition: max-height 0.7s ease-in-out;
 
     }
 
@@ -286,6 +289,10 @@
         &:hover{
             transform: scale(1.1);
         }
+    }
+
+    &__hide-btn {
+        display: none;
     }
 }
 

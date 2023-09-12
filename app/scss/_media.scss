@@ -283,6 +283,7 @@
 
     .title {
         font-size: 32px;
+        padding-right: 0;
 
         &--accent {
             font-size: 32px;
@@ -290,6 +291,10 @@
     }
 
     .gallery {
+        &__inner {
+            padding-bottom: 53px;
+        }
+
         &__items {
             gap: 15px;
             grid-template-columns: repeat(1, 1fr);
@@ -299,6 +304,19 @@
             border-radius: 0;
             margin: 0 -15px;
             height: 270px;
+        }
+
+        &__hide-btn {
+            display: block;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto", sans-serif;
+            padding: 0 0 2px 0;
+            border-bottom: 1px solid $accent;
+            cursor: pointer;
+            text-align: center;
+            margin: 45px auto 0;
         }
     }
 }

@@ -90,18 +90,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let galleryImg = document.querySelectorAll('.gallery__item-img')
 
-window.addEventListener('resize', () => {
-  console.log('resize');
-  if(window.innerWidth <= 450) {
+  window.addEventListener('resize', () => {
+    console.log('resize');
+    if (window.innerWidth <= 450) {
+      galleryImg.forEach((element) => {
+        if (!element.src.includes('-mobile.jpg')) {
+          element.src = element.src.replace('.jpg', '-mobile.jpg')
+        }
+      })
+    }
 
-  }
-})
+    if (window.innerWidth > 450) {
+      galleryImg.forEach((element) => {
+        if (element.src.includes('-mobile.jpg')) {
+          element.src = element.src.replace('-mobile.jpg', '.jpg')
+        }
+      })
+    }
+
+  })
 
   if (window.innerWidth <= 450) {
     galleryImg.forEach((element) => {
       element.src = element.src.replace('.jpg', '-mobile.jpg')
     })
   }
+
+  let galleryBtn = document.querySelector('.gallery__hide-btn')
+  let gallaryItem = document.querySelectorAll('.gallery__item')
+  let gallaryItems = document.querySelector('.gallery__items')
+  let scrollTo = document.querySelector('.gallery__buttons')
+
+  galleryBtn.addEventListener('click', () => {
+    console.log('fjief');
+    if (gallaryItems.classList.contains('expanded')) {
+      // Згорнути
+      gallaryItems.style.maxHeight = '840px'; // Змініть це значення на ваш вибір
+      gallaryItems.classList.remove('expanded');
+      gallaryItem.forEach(item => item.classList.add('gallery__item--hide'));
+      gallaryItem[2].scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Розгорнути
+      gallaryItems.style.maxHeight = '3000px'; // Змініть це значення на ваш вибір
+      gallaryItems.classList.add('expanded');
+      gallaryItem.forEach(item => item.classList.remove('gallery__item--hide'));
+    }
+  })
 });
 
 
