@@ -32,23 +32,52 @@ document.addEventListener('DOMContentLoaded', function () {
     );
   })
 
+  let gallaryItems = document.querySelector('.gallery__inner')
 
-  if (document.querySelector('.gallery__inner')) {
-    var mixer = mixitup('.gallery__inner', {
+  if (gallaryItems) {
+    var mixer = mixitup(gallaryItems, {
       load: {
         filter: '.all'
+      },
+      callbacks: {
+        onMixEnd: function (state) {
+          // Визначаємо активний контейнер
+          var activeContainer = state.activeFilter.selector;
+
+          // Знайдіть всі активні контейнери і видаліть клас "active-container" з попереднього активного контейнера
+          gallaryItems.querySelectorAll('.gallery__items').forEach(function (item) {
+            item.classList.remove('active-container');
+          });
+
+          // Додаємо клас "active-container" до активного контейнера
+          gallaryItems.querySelectorAll(activeContainer).forEach(function (item) {
+            item.classList.add('active-container');
+          });
+        }
       }
+
     })
   }
 
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      1140: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: false,
+      }
+    },
     pagination: {
       el: '.swiper-pagination',
-    },
+    }
   })
+
+
 
   Fancybox.bind('[data-fancybox="gallery-1"]', {
     // Your custom options
@@ -118,24 +147,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let galleryBtn = document.querySelector('.gallery__hide-btn')
   let gallaryItem = document.querySelectorAll('.gallery__item')
-  let gallaryItems = document.querySelector('.gallery__items')
+
   let scrollTo = document.querySelector('.gallery__buttons')
 
   galleryBtn.addEventListener('click', () => {
-    console.log('fjief');
+
     if (gallaryItems.classList.contains('expanded')) {
       // Згорнути
       gallaryItems.style.maxHeight = '840px'; // Змініть це значення на ваш вибір
       gallaryItems.classList.remove('expanded');
-      gallaryItem.forEach(item => item.classList.add('gallery__item--hide'));
-      gallaryItem[2].scrollIntoView({ behavior: "smooth" });
+      document.querySelectorAll('.active-container .gallery__item')[2].scrollIntoView({ behavior: "smooth" });
+
     } else {
       // Розгорнути
       gallaryItems.style.maxHeight = '3000px'; // Змініть це значення на ваш вибір
       gallaryItems.classList.add('expanded');
-      gallaryItem.forEach(item => item.classList.remove('gallery__item--hide'));
     }
   })
+
+
 });
 
 

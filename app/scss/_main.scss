@@ -235,7 +235,7 @@
         padding-right: 50px;
         margin-bottom: 28px;
 
-        &:last-child {
+        &:nth-child(5) {
             padding-right: 0;
         }
 
@@ -260,17 +260,14 @@
 
     &__inner {
         padding-bottom: 78px;
-
+        overflow: hidden;
+        transition: max-height 0.7s ease-in-out;
     }
 
     &__items {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px 30px;
-        max-height: 840px;
-        overflow: hidden;
-        transition: max-height 0.7s ease-in-out;
-
     }
 
     &__item {
@@ -297,6 +294,7 @@
 }
 
 .pricing {
+    padding: 0 15px;
     &__title-wrap {}
 }
 
@@ -304,6 +302,7 @@
     max-width: 970px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     gap: 82px;
     margin-bottom: 102px;
 
@@ -320,6 +319,7 @@
         text-align: center;
         border-radius: 10px;
         border: 2px solid $accent;
+        background-color: #FDFBF8;
         display: flex;
         flex-direction: column;
         min-height: 448px;

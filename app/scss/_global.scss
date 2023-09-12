@@ -67,7 +67,6 @@ a {
 	color: $primary;
 	line-height: 1;
 	margin: 0;
-	padding-right: 17px;
 
 	&--accent {
 		@extend %title-font;
@@ -80,6 +79,11 @@ a {
 		justify-content: center;
 		padding-bottom: 84px;
 		padding-top: 70px;
+	}
+
+	&--left {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
