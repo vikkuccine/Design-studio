@@ -63,18 +63,18 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    centeredSlides: true,
     breakpoints: {
-      1140: {
+      990: {
         slidesPerView: 2,
         spaceBetween: 30,
-        loop: true,
-        centeredSlides: false,
+        loop: true
       }
     },
     pagination: {
       el: '.swiper-pagination',
-    }
+      clickable: true
+    },
+
   })
 
 
@@ -118,6 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   let galleryImg = document.querySelectorAll('.gallery__item-img')
+  let adjustTextTo = document.querySelector('.footer__logo')
+  let adjustingDiv = document.querySelector('.footer__contacts')
+  let nextSibling = document.querySelector('.footer__about .footer__contacts')
+  let reversAdjustment = document.querySelector('.footer__inner')
 
   window.addEventListener('resize', () => {
     console.log('resize');
@@ -137,7 +141,22 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     }
 
+    let nextSibling = document.querySelector('.footer__about .footer__contacts')
+
+    if (window.innerWidth <= 840 && !nextSibling) {
+      adjustTextTo.after(adjustingDiv)
+    }
+
+    if (window.innerWidth > 840 && nextSibling) {
+      reversAdjustment.append(adjustingDiv)
+    }
+    
   })
+
+  
+  if (window.innerWidth <= 840) {
+    adjustTextTo.after(adjustingDiv)
+  }
 
   if (window.innerWidth <= 450) {
     galleryImg.forEach((element) => {
@@ -164,8 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
       gallaryItems.classList.add('expanded');
     }
   })
-
-
 });
 
 
