@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
           window.location.href = "/";
         }
-
       },
       false,
     );
@@ -41,15 +40,12 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       callbacks: {
         onMixEnd: function (state) {
-          // Визначаємо активний контейнер
           var activeContainer = state.activeFilter.selector;
 
-          // Знайдіть всі активні контейнери і видаліть клас "active-container" з попереднього активного контейнера
           gallaryItems.querySelectorAll('.gallery__items').forEach(function (item) {
             item.classList.remove('active-container');
           });
 
-          // Додаємо клас "active-container" до активного контейнера
           gallaryItems.querySelectorAll(activeContainer).forEach(function (item) {
             item.classList.add('active-container');
           });
@@ -80,23 +76,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   Fancybox.bind('[data-fancybox="gallery-1"]', {
-    // Your custom options
   });
 
   Fancybox.bind('[data-fancybox="gallery-2"]', {
-    // Your custom options
   });
 
   Fancybox.bind('[data-fancybox="gallery-3"]', {
-    // Your custom options
   });
 
   Fancybox.bind('[data-fancybox="gallery-4"]', {
-    // Your custom options
   });
 
   Fancybox.bind('[data-fancybox="gallery-5"]', {
-    // Your custom options
   });
 
 
@@ -180,14 +171,12 @@ document.addEventListener('DOMContentLoaded', function () {
   galleryBtn.innerHTML = gallaryItems.classList.contains('expanded') ? 'View More' : 'View Less'
     
     if (gallaryItems.classList.contains('expanded')) {
-      // Згорнути
-      gallaryItems.style.maxHeight = '840px'; // Змініть це значення на ваш вибір
+      gallaryItems.style.maxHeight = '840px';
       gallaryItems.classList.remove('expanded');
       document.querySelectorAll('.active-container .gallery__item')[2].scrollIntoView({ behavior: "smooth" });
 
     } else {
-      // Розгорнути
-      gallaryItems.style.maxHeight = '3000px'; // Змініть це значення на ваш вибір
+      gallaryItems.style.maxHeight = '3000px';
       gallaryItems.classList.add('expanded');
 
     }
