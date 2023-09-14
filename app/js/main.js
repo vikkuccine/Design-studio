@@ -112,8 +112,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let infoBtn = document.querySelector('.info__text-btn')
   let secondParagraph = document.querySelector('.info__text-paragraph')
+  let readLess = document.querySelector('.info__text-paragraph .info__text-paragraph--hide')
+
   infoBtn.addEventListener('click', () => {
+    let readLess = document.querySelector('.info__text-paragraph--hide')
+
     secondParagraph.classList.toggle('info__text-paragraph--hide');
+    infoBtn.innerHTML = readLess ? 'READ MORE' : 'READ LESS'
+
   })
 
 
@@ -150,10 +156,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth > 840 && nextSibling) {
       reversAdjustment.append(adjustingDiv)
     }
-    
+
   })
 
-  
+
   if (window.innerWidth <= 840) {
     adjustTextTo.after(adjustingDiv)
   }
@@ -171,6 +177,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   galleryBtn.addEventListener('click', () => {
 
+  galleryBtn.innerHTML = gallaryItems.classList.contains('expanded') ? 'View More' : 'View Less'
+    
     if (gallaryItems.classList.contains('expanded')) {
       // Згорнути
       gallaryItems.style.maxHeight = '840px'; // Змініть це значення на ваш вибір
@@ -181,6 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Розгорнути
       gallaryItems.style.maxHeight = '3000px'; // Змініть це значення на ваш вибір
       gallaryItems.classList.add('expanded');
+
     }
   })
 });
