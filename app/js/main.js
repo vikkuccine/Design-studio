@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
         {
           value: 'UA',
           label: 'UA',
-          selected: window.location.pathname === '/index-ua.html',
+          selected: window.location.pathname.includes('/index-ua.html'),
         },
         {
           value: 'EN',
           label: 'EN',
-          selected: window.location.pathname === '/index.html' || window.location.pathname === '/',
+          selected: window.location.pathname.includes('/index.html') || window.location.pathname === '/',
         },
       ]
     });
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
       'choice',
       function (event) {
         if (event.detail.choice.value === 'UA') {
-          window.location.href = "index-ua.html";
+          window.location.href = "./index-ua.html";
         } else {
-          window.location.href = "/";
+          window.location.href = "./";
         }
       },
       false,
@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let galleryImg = document.querySelectorAll('.gallery__item-img')
   let adjustTextTo = document.querySelector('.footer__logo')
   let adjustingDiv = document.querySelector('.footer__contacts')
-  let nextSibling = document.querySelector('.footer__about .footer__contacts')
   let reversAdjustment = document.querySelector('.footer__inner')
 
   window.addEventListener('resize', () => {

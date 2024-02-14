@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
@@ -29,21 +29,19 @@
                             <nav class="burger-text">
                                 <ul class="burger-text__list">
                                     <li class="burger-text__list-item">
-                                        <a class="burger-text__list-link" href="">Сервіси</a>
+                                        <a class="burger-text__list-link" href="#">Сервіси</a>
                                     </li>
                                     <li class="burger-text__list-item">
-                                        <a class="burger-text__list-link" href="">Портфоліо</a>
+                                        <a class="burger-text__list-link" href="#">Портфоліо</a>
                                     </li>
                                     <li class="burger-text__list-item">
-                                        <a class="burger-text__list-link" href="">Ціни</a>
+                                        <a class="burger-text__list-link" href="#">Ціни</a>
                                     </li>
                                     <li class="burger-text__list-item"><a href="tel:3035550105"
                                             class="burger-text_tel">(303)
                                             555-0105</a></li>
                                     <li class="burger-text__list-item">
-                                        <select class="js-choice" name="" id="">
-                                            <!-- <option value="Option-1" selected>EN</option>
-                                        <option value="Option-2"><a href="../index-ua.html">UA</a></option> -->
+                                        <select class="js-choice" name="mobile-choice" id="mobile-choice">
                                         </select>
                                     </li>
                                 </ul>
@@ -53,22 +51,20 @@
                             <nav class="menu">
                                 <ul class="menu__list">
                                     <li class="menu__list-item">
-                                        <a class="menu__list-link" href="">Послуги</a>
+                                        <a class="menu__list-link" href="#">Послуги</a>
                                     </li>
                                     <li class="menu__list-item">
-                                        <a class="menu__list-link" href="">Портфоліо</a>
+                                        <a class="menu__list-link" href="#">Портфоліо</a>
                                     </li>
                                     <li class="menu__list-item">
-                                        <a class="menu__list-link" href="">Ціни</a>
+                                        <a class="menu__list-link" href="#">Ціни</a>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="header__info">
                             <a href="tel:3035550105" class="header__tel">(303) 555-0105</a>
-                            <select class="js-choice" name="" id="">
-                                <!-- <option value="Option-1" selected>EN</option>
-                            <option value="Option-2"><a href="../index-ua.html">UA</a></option> -->
+                            <select class="js-choice" name="desktop-choice" id="desktop-choice">
                             </select>
                         </div>
                     </div>
@@ -91,7 +87,7 @@
                             <h3 class="info__title title title--left">Про <span class="title--accent">Студію</span></h3>
                         </div>
                         <div class="info__text-wrap">
-                            <p class="info__text">nteriart – це нагороджена практика з архітектури і дизайну інтер'єру,
+                            <p class="info__text">Interiart – це нагороджена практика з архітектури і дизайну інтер'єру,
                                 розташована в Нью-Йорку. Ми працюємо на міжнародному рівні над проектами дизайну
                                 інтер'єру для житла та комерційних об'єктів, які вимагають творчого підходу. Наші
                                 талановиті та досвідчені дизайнери використовують свої знання і експертизу, щоб
@@ -115,7 +111,7 @@
                         <ul class="services-list">
                             <li class="services-list__item">
                                 <div class="services-list__photo">
-                                    <img class="services-list__img" src="images/src/services-icon-1.svg" alt="">
+                                    <img class="services-list__img" src="images/services-icon-1.svg" alt="">
                                 </div>
                                 <h4 class="services-list__title">Інтер'єрний дизайн</h4>
                                 <p class="services-list__text">
@@ -125,7 +121,7 @@
                             </li>
                             <li class="services-list__item">
                                 <div class="services-list__photo">
-                                    <img class="services-list__img" src="images/src/services-icon-2.svg" alt="">
+                                    <img class="services-list__img" src="images/services-icon-2.svg" alt="">
                                 </div>
                                 <h4 class="services-list__title">Декоративні послуги</h4>
                                 <p class="services-list__text">
@@ -134,7 +130,7 @@
                             </li>
                             <li class="services-list__item">
                                 <div class="services-list__photo">
-                                    <img class="services-list__img" src="images/src/services-icon-3.svg" alt="">
+                                    <img class="services-list__img" src="images/services-icon-3.svg" alt="">
                                 </div>
                                 <h4 class="services-list__title">Планування простору</h4>
                                 <p class="services-list__text">
@@ -144,7 +140,7 @@
                             </li>
                             <li class="services-list__item">
                                 <div class="services-list__photo">
-                                    <img class="services-list__img" src="images/src/services-icon-4.svg" alt="">
+                                    <img class="services-list__img" src="images/services-icon-4.svg" alt="">
                                 </div>
                                 <h4 class="services-list__title">Управління проектом</h4>
                                 <p class="services-list__text">
@@ -169,10 +165,11 @@
                             <button class="gallery__btn" data-filter=".residential">Житлові</button>
                             <button class="gallery__btn" data-filter=".office">Офісні</button>
                             <button class="gallery__btn" data-filter=".other">Інші</button>
-                            <a class="gallery__btn-link" href=""><button
-                                    class="gallery__btn gallery__btn-view-more">
+                            <a class="gallery__btn-link" href="#">
+                                <div class="gallery__btn gallery__btn-view-more">
                                     Детальніше
-                                    </button></a>
+                                </div>
+                            </a>
                         </div>
                         <div class="gallery__inner">
                             <div class="gallery__items mix all active-container">
@@ -300,7 +297,9 @@
                         </div>
                         <button class="gallery__hide-btn">Детальніше</button>
                     </div>
+                </div>
             </section>
+
             <section class="pricing">
                 <div class="pricing__title-wrap title--center">
                     <h3 class="title">Наші <span class="title--accent">Ціни</span></h3>
@@ -366,11 +365,11 @@
                                             <div class="reviews-box__position">Асоціат з мерчандайзингу</div>
                                             <div class="reviews-box__icons icon-box">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-twitter.svg" alt="">
+                                                    src="./images/icon-twitter.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-linkedin.svg" alt="">
+                                                    src="./images/icon-linkedin.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-facebook.svg" alt="">
+                                                    src="./images/icon-facebook.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -390,11 +389,11 @@
                                             <div class="reviews-box__position">Адміністратор</div>
                                             <div class="reviews-box__icons icon-box">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-twitter.svg" alt="">
+                                                    src="./images/icon-twitter.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-linkedin.svg" alt="">
+                                                    src="./images/icon-linkedin.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-facebook.svg" alt="">
+                                                    src="./images/icon-facebook.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -414,11 +413,11 @@
                                             <div class="reviews-box__position">Асоціат з мерчандайзингу</div>
                                             <div class="reviews-box__icons icon-box">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-twitter.svg" alt="">
+                                                    src="./images/icon-twitter.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-linkedin.svg" alt="">
+                                                    src="./images/icon-linkedin.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-facebook.svg" alt="">
+                                                    src="./images/icon-facebook.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -437,11 +436,11 @@
                                             <div class="reviews-box__position">Адміністратор</div>
                                             <div class="reviews-box__icons icon-box">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-twitter.svg" alt="">
+                                                    src="./images/icon-twitter.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-linkedin.svg" alt="">
+                                                    src="./images/icon-linkedin.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-facebook.svg" alt="">
+                                                    src="./images/icon-facebook.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -459,11 +458,11 @@
                                             <div class="reviews-box__position">Асоціат з мерчандайзингу</div>
                                             <div class="reviews-box__icons icon-box">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-twitter.svg" alt="">
+                                                    src="./images/icon-twitter.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-linkedin.svg" alt="">
+                                                    src="./images/icon-linkedin.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-facebook.svg" alt="">
+                                                    src="./images/icon-facebook.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -482,11 +481,11 @@
                                             <div class="reviews-box__position">Адміністратор</div>
                                             <div class="reviews-box__icons icon-box">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-twitter.svg" alt="">
+                                                    src="./images/icon-twitter.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-linkedin.svg" alt="">
+                                                    src="./images/icon-linkedin.svg" alt="">
                                                 <img class="reviews-box__icon icon-box__item"
-                                                    src="../images/icon-facebook.svg" alt="">
+                                                    src="./images/icon-facebook.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -514,8 +513,9 @@
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__about">
-                        <img class="footer__logo" src="../images/logo.png" alt="logo">
-                        <p class="footer__text">Ми є однією з провідних студій дизайну і ремонту інтер'єрів, доступних для всіх ваших потреб
+                        <img class="footer__logo" src="./images/logo.png" alt="logo">
+                        <p class="footer__text">Ми є однією з провідних студій дизайну і ремонту інтер'єрів, доступних
+                            для всіх ваших потреб
                             у дизайні інтер'єру житлових та комерційних об'єктів.
                         </p>
                         <p class="footer__credits">© 2023 id Studio. Всі права захищено.</p>
@@ -531,9 +531,15 @@
                             <a class="footer__menu-item" href="#">Відгуки</a>
                         </nav>
                         <div class="footer__icons icon-box">
-                            <img class="footer__icon icon-box__item" src="../images/icon-twitter.svg" alt="">
-                            <img class="footer__icon icon-box__item" src="../images/icon-linkedin.svg" alt="">
-                            <img class="footer__icon icon-box__item" src="../images/icon-facebook.svg" alt="">
+                            <a href="#" class="footer__icon icon-box__item">
+                                <img src="./images/icon-twitter.svg" alt="icon">
+                            </a>
+                            <a href="#" class="footer__icon icon-box__item">
+                                <img src="./images/icon-linkedin.svg" alt="icon">
+                            </a>
+                            <a href="#" class="footer__icon icon-box__item">
+                                <img src="./images/icon-facebook.svg" alt="icon">
+                            </a>
                         </div>
                     </div>
 
