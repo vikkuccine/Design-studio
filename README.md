@@ -1,4 +1,4 @@
-HTML Template "Disign Studio"
+Adaptive HTML Template "Disign Studio"
 
 Tehnologis which was used to do this project:
 - HTML
