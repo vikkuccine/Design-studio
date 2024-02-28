@@ -12,8 +12,8 @@ Libraries:
 - Mixitup.js
 - Fancybox
 
-[**Demo**](https://vikkuccine.saenq.space/design-studio/)
+[**Demo**](https://vikario.space/design-studio/)
 
 <p align='center'>
-    <img src='https://vikkuccine.saenq.space/design-studio/preview.jpg' width='100%'>
+    <img src='https://vikario.space/design-studio/preview.jpg' width='100%'>
 </p>
